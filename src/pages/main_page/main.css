@@ -1,0 +1,106 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--main-clr);
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 150px;
+    font-family: var(--text-main-fam);
+    color: white;
+}
+
+.wave {
+    margin: -3px 0;
+}
+
+.main-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-button {
+    all: unset;
+    width: 25rem;
+    height: 8rem;
+    background-color: var(--btn-clr);
+    border-radius: 50px;
+    color: white;
+    font-family: var(--text-sec-fam);
+    font-size: 3.5rem;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background-color: var(--main-clr);
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+.main-button:active {
+    background-color: var(--btn-clr);
+    transform: scale(1.2);
+}
+
+
+/* Responsive design */
+
+/* 900px */
+
+@media only screen and (max-width: 900px) {
+    .header {
+        height: 40vh;
+    }
+    .main-title {
+        font-size: 100px;
+    }
+
+    .main-button-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        margin-top: 4.7rem;
+    }
+
+    .main-button:hover {
+
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header {
+        height: 40vh;
+    }
+    .main-title {
+        font-size: 50px;
+    }
+
+    .main-button-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.2rem;
+
+    }
+
+    .main-button {
+        width: 15rem;
+        font-size: 1.5rem;
+    }
+    .main-button:hover {
+
+    }
+}

@@ -1,0 +1,9 @@
+:root {
+    /* Fonts */
+    --text-main-fam: 'Chau Philomene One', sans-serif;
+    --text-sec-fam: 'Gorditas', cursive;
+
+    /* Colors */
+    --main-clr: #FF00F5;
+    --btn-clr: #9E00FF;
+}
