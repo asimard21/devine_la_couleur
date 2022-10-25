@@ -40,21 +40,9 @@ body {
     font-family: var(--text-sec-fam);
     font-size: 3.5rem;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.1s;
     cursor: pointer;
 }
-
-/* .main-button:hover {
-    background-color: var(--main-clr);
-    transform: scale(0.9);
-    transition: 0.2s;
-} */
-
-.main-button:active {
-    background-color: var(--btn-clr);
-    transform: scale(1.2);
-}
-
 
 
 /* Responsive design */
@@ -63,7 +51,6 @@ body {
     .main-button:hover {
         background-color: var(--main-clr);
         transform: scale(0.9);
-        transition: 0.2s;
     }
 
     .main-button:active {
