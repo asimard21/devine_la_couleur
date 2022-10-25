@@ -73,7 +73,7 @@ body {
         justify-content: center;
         align-items: center;
         gap: 5rem;
-        margin-top: 4.7rem;
+        margin-top: 4.7em;
     }
 
     .main-button:hover {
@@ -81,28 +81,6 @@ body {
     }
 
 }
-
-
-/* @media only screen and (max-width: 900px) {
-    .header {
-        height: 40vh;
-    }
-    .main-title {
-        font-size: 100px;
-    }
-
-    .main-button-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-        margin-top: 4.7rem;
-    }
-
-    .main-button:hover {
-
-    }
-} */
 
 
 
@@ -119,15 +97,20 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 1.2rem;
+        margin-top: 1.2em;
+        gap: 2em;
 
     }
 
     .main-button {
-        width: 80%;
         font-size: 1.7rem;
     }
+
     .main-button:hover {
+
+    }
+
+    .main-button:active {
 
     }
 }
