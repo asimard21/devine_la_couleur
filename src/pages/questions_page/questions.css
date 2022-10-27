@@ -10,6 +10,10 @@
     padding: 0 1rem;
 }
 
+.counter-container {
+    background-color: red;
+}
+
 .counter {
     font-family: var(--text-sec-fam);
     font-size: 3.125rem;

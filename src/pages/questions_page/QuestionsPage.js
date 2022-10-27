@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Routes, Route} from 'react-router-dom'
 
 /* components */
 import { QuestionsCounter } from '../../components/QuestionsCounter/QuestionsCounter';
@@ -12,8 +13,8 @@ import '../../assets/css/root.css'
 
 /* assets */
 import { ReactComponent as Blob1 } from '../../assets/images/blobs/blob1.svg';
-import { ReactComponent as Blob2 } from '../../assets/images/blobs/blob2.svg';
-import { ReactComponent as Blob3 } from '../../assets/images/blobs/blob3.svg';
+import { ReactComponent as Blob2 } from '../../assets/images/blobs/blob3.svg';
+import { ReactComponent as Blob3 } from '../../assets/images/blobs/blob2.svg';
 
 
 
@@ -50,7 +51,7 @@ export const QuestionsPage = (props) => {
 
     return (
         <div className='questions-container'>
-            <QuestionsCounter counter={counter}/>
+                <QuestionsCounter counter={counter}/>
             <div className='question-text-container'>
                 <Questions question={question}/>
             </div>
