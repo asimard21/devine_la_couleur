@@ -21,13 +21,14 @@ body {
 }
 
 .wave {
-    margin: -3px 0;
+    margin: -3px 0 0 0;
 }
 
 .main-button-container {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding: 2em 0;
 }
 
 .main-button {
@@ -47,6 +48,10 @@ body {
 .main-button:active {
     background-color: var(--btn-clr);
     transform: scale(1.2);
+}
+
+.link {
+    text-decoration: none;
 }
 
 /* Responsive design */
@@ -74,7 +79,6 @@ body {
         justify-content: center;
         align-items: center;
         gap: 5rem;
-        margin-top: 4.7em;
     }
 }
 
@@ -93,7 +97,6 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 1.2em;
         gap: 2em;
 
     }

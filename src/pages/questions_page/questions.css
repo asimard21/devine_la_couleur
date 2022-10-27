@@ -1,0 +1,166 @@
+
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--main-clr);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.counter {
+    font-family: var(--text-sec-fam);
+    font-size: 3.125rem;
+    margin: 3.5rem 3.5rem;
+    color: white;
+    z-index: 100;
+}
+
+.question-text-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    z-index: 100;
+}
+
+.question {
+    font-family: var(--text-main-fam);
+    color: white;
+    font-size: 8rem;
+    align-self: center;
+    z-index: 100;
+}
+
+.nav-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    z-index: 100;
+
+}
+
+.nav-button {
+    all: unset;
+    width: 8em;
+    height: 3em;
+    background-color: var(--btn-clr);
+    border-radius: 50px;
+    color: white;
+    font-family: var(--text-sec-fam);
+    font-size: 2rem;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+    z-index: 100;
+}
+
+@media (hover: hover) {
+    .nav-button:hover {
+        transform: scale(0.9);
+        transition: 0.2s;
+    }
+}
+
+.blobs {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+}
+
+#blob1 {
+    left: 80%;
+    top: -15%;
+}
+
+#blob2 {
+    left: -5%;
+    top: 30%;
+}
+
+#blob3 {
+    left: 60%;
+    top: 80%;
+}
+
+
+@media only screen and (max-width: 1020px) {
+    .counter {
+        text-align: center;
+    }
+
+    .question-text-container {
+
+        z-index: 100;
+    }
+    
+    .question {
+        font-family: var(--text-main-fam);
+        color: white;
+        font-size: 8rem;
+        align-self: center;
+        z-index: 100;
+    }
+
+    #blob1 {
+        left: 70%;
+        top: -10%;
+    }
+    
+    #blob2 {
+        left: -15%;
+        top: 30%;
+    }
+    
+    #blob3 {
+        left: 60%;
+        top: 85%;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 770px) {
+    .counter {
+        font-size: 3rem;
+    }
+
+   
+    .question {
+        font-size: 6rem;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    .counter {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+
+    .question-text-container {
+        height: 30%;
+    }
+    .question {
+        font-size: 3rem;
+    }
+
+    .nav-buttons-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .nav-button {
+        font-size: 1.5rem;
+    }
+}

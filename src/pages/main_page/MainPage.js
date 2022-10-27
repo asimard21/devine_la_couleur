@@ -12,6 +12,5 @@ export const MainPage = () => {
             <TitleMenu />
             <MainButton />
         </div>
-    )
-        
+    )        
 }
