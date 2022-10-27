@@ -15,10 +15,7 @@ import { ReactComponent as Blob1 } from '../../assets/images/blobs/blob1.svg';
 import { ReactComponent as Blob2 } from '../../assets/images/blobs/blob2.svg';
 import { ReactComponent as Blob3 } from '../../assets/images/blobs/blob3.svg';
 
-/* Dom variables */
-const blob1 = document.getElementById('blob1');
-const blob2 = document.getElementById('blob2');
-const blob3 = document.getElementById('blob3');
+
 
 export const QuestionsPage = (props) => {
     const [counter, setCounter] = useState(0);
