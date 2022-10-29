@@ -21,7 +21,10 @@ import { ReactComponent as Blob3 } from '../../assets/images/blobs/blob2.svg';
 export const QuestionsPage = (props) => {
     const [counter, setCounter] = useState(0);
     const [question, setQuestion] = useState('');
+    const [answer, setAnswer] = useState('');
     const [usedQuestions, setUsedQuestions] = useState([]);
+    const [buttonTwo, setButtonTwo] = useState({text: 'débuter'})
+    const [isAnswer, setIsAnswer] = useState(false);
 
     useEffect(() => {
         setQuestion('Préparez-vous pour la première question!');
@@ -30,22 +33,40 @@ export const QuestionsPage = (props) => {
     const handleCounter = () => setCounter(counter + 1);
 
     const handleNextQuestion = () => {
-        let nextQuestion = 0;
-        while (usedQuestions.length < questions.length) {
-            nextQuestion = Math.floor(Math.random()*questions.length);
-            if (usedQuestions.includes(questions[nextQuestion].id)) {
-                continue;
-            } else {
-                break;
-            }
+        let questionIndex = 0;
+
+        if (buttonTwo.text === 'débuter') {
+            setButtonTwo({text: 'réponse'});
+        } else {
+
         }
 
-        if (usedQuestions.length === questions.length) {
-            setQuestion('Plus aucune question');
+        if (isAnswer) {
+            setQuestion(answer);
+            setButtonTwo({text: 'suivante'});
+            setIsAnswer(false);
         } else {
-            setQuestion(questions[nextQuestion].question);
-            handleCounter();
-            setUsedQuestions((prev) => [questions[nextQuestion].id, ...prev]);
+            while (usedQuestions.length < questions.length) {
+                questionIndex = Math.floor(Math.random()*questions.length);
+                if (usedQuestions.includes(questionIndex)) {
+                    console.log(usedQuestions)
+                    continue;
+                } else {
+                    break;
+                }
+            }
+    
+            if (usedQuestions.length === questions.length) {
+                setQuestion('Plus aucune question');
+                setCounter(0);
+            } else {
+                setQuestion(questions[questionIndex].question);
+                setAnswer(questions[questionIndex].reponse);
+                handleCounter();
+                setUsedQuestions((prev) => [questionIndex, ...prev]);
+                setButtonTwo({text: 'réponse'});
+                setIsAnswer(true);
+            } 
         }
     }
 
@@ -53,11 +74,11 @@ export const QuestionsPage = (props) => {
         <div className='questions-container'>
                 <QuestionsCounter counter={counter}/>
             <div className='question-text-container'>
-                <Questions question={question}/>
+                <Questions question={question} />
             </div>
             <NavButtons buttonOne={'menu'} 
                         buttonOneAction={'/'}
-                        buttonTwo={'suivante'}
+                        buttonTwo={buttonTwo.text}
                         buttonTwoAction={handleNextQuestion}
                          />
             <Blob1 className='blobs' id='blob1'/>
